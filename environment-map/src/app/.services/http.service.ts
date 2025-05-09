@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { EdgeNodeReply } from '../common/interfaces';
+import { EdgeNodeReply } from '../.common/interfaces';
 import { lastValueFrom } from 'rxjs';
 
 @Injectable({

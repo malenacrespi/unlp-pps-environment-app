@@ -1,5 +1,5 @@
 {
-  "name": "environment-app",
+  "name": "environment-map",
   "integrations": {
     "capacitor": {}
   },
