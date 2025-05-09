@@ -32,7 +32,7 @@ export class OgmComponent implements OnInit {
     return this.currentOgmStyle;
   }
 
-  getCellStyle(cell: any): any {
+  public getCellStyle(cell: any): any {
     switch(cell){
       case 0: return { 'background-color': '#d9d7d7' };
       case 1: return { 'background-color': '#21d948' };
