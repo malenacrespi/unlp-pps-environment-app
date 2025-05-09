@@ -16,15 +16,15 @@ export class HttpService {
     this.consecutiveErrors = 0;
   }
 
-  httpGet(source: string): Promise<any> {
+  public httpGet(source: string): Promise<any> {
     return lastValueFrom(this.httpClient.get(source));
   }
 
-  httpPost(data: any, destination: string): Promise<any> {
+  public httpPost(data: any, destination: string): Promise<any> {
     return lastValueFrom(this.httpClient.post(destination, data));
   } 
 
-  httpResponseHandle(response: any): EdgeNodeReply {
+  public httpResponseHandle(response: any): EdgeNodeReply {
     response = <EdgeNodeReply>response;
     console.log('--- HTTP RESPONSE -------------------');
     console.log('- RESPONSE.NAME: ' + response.name);
@@ -34,7 +34,7 @@ export class HttpService {
     return response;
   }
 
-  httpErrorHandle(error: any): HttpErrorResponse {
+  public httpErrorHandle(error: any): HttpErrorResponse {
     error = <HttpErrorResponse>error;
     console.log('--- HTTP ERROR ----------------------');
     console.log('- ERROR.NAME: ' + error.name);
@@ -47,7 +47,7 @@ export class HttpService {
     return error;
   }
 
-  getConsecutiveErrors(): number {
+  public getConsecutiveErrors(): number {
     return this.consecutiveErrors;
   }
 
