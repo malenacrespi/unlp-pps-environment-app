@@ -1,6 +1,6 @@
 <!-- OCCUPANCY GRID MAP ---------------------------------------------------------------->
-<div class="map-container" [ngStyle]="getCurrentOgmStyle()">
-  <div *ngFor="let cell of getCurrentOgm(); let i = index" [ngStyle]="getCellStyle(cell)">
+<div class="map-container" [ngStyle]="getOgmStyle()">
+  <div *ngFor="let cell of getOgmCells(); let i = index" [ngStyle]="getOgmCellStyle(cell)">
     <p>{{ cell.toString() }}</p>
   </div>
 </div>

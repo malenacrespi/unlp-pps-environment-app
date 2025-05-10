@@ -24,20 +24,20 @@ export class OgmComponent implements OnInit {
     }
   }
 
-  public getOgm(): number[] {
-    return this.ogm.getCells();
-  }
-
   public getOgmStyle(): any {
     return this.ogmStyle;
   }
 
+  public getOgmCells(): number[] {
+    return this.ogm.getCells();
+  }
+
   public getOgmCellStyle(cell: any): any {
     switch(cell){
-      case 0: return { 'background-color': '#d9d7d7' };
-      case 1: return { 'background-color': '#21d948' };
-      case 2: return { 'background-color': '#db3623' };
-      default: return { 'background-color': '#d9d7d7' };
+      case 0: return { 'background-color': '#d9d7d7' };   // 0 - Unknown
+      case 1: return { 'background-color': '#21d948' };   // 1 - Free
+      case 2: return { 'background-color': '#db3623' };   // 2 - Occupied
+      default: return { 'background-color': '#d9d7d7' };  // Unknown
     }
   }
 
