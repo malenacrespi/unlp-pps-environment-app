@@ -10,9 +10,7 @@ export class HttpService {
 
   private consecutiveErrors: number;
 
-  constructor(
-    public httpClient: HttpClient,
-  ) {
+  constructor(public httpClient: HttpClient) {
     this.consecutiveErrors = 0;
   }
 
@@ -26,6 +24,7 @@ export class HttpService {
 
   public httpResponseHandle(response: any): EdgeNodeReply {
     response = <EdgeNodeReply>response;
+    // Log for debug only
     console.log('--- HTTP RESPONSE -------------------');
     console.log('- RESPONSE.NAME: ' + response.name);
     console.log('- RESPONSE.MESSAGE: ' + response.message);
@@ -36,6 +35,7 @@ export class HttpService {
 
   public httpErrorHandle(error: any): HttpErrorResponse {
     error = <HttpErrorResponse>error;
+    // Log for debug only
     console.log('--- HTTP ERROR ----------------------');
     console.log('- ERROR.NAME: ' + error.name);
     console.log('- ERROR.MESSAGE: ' + error.message);
