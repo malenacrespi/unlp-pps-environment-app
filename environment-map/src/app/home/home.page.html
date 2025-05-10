@@ -1,9 +1,15 @@
+<!-- HOME PAGE ------------------------------------------------------------------------->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Occupancy Grid Map - Robot IoT</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+      <ion-icon slot="icon-only" name="remove-circle" style="padding-left: 10px; padding-right: 10px;"></ion-icon>
+      <ion-icon slot="icon-only" name="options" style="padding-right: 20px;"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <app-ogm></app-ogm>
 </ion-content>
+<!-------------------------------------------------------------------------------------->
