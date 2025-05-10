@@ -13,7 +13,7 @@ export class MapDataService {
     let roomLenght: number = 500 // [cm]
     let roomWidth: number = 200 // [cm]
     console.log(`-> ROOM DIMENSION: ${roomLenght}x${roomWidth}`);
-    // Creation of Map instance
+    // Creation of Map instance (variables for debug only)
     let cells: number[] = [];
     let rows: number = Math.ceil(roomLenght/5);
     let columns: number = Math.ceil(roomWidth/5); 
