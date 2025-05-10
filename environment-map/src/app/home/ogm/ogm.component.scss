@@ -1,10 +1,14 @@
 .map-container {
+    //background-image: url('/assets/background/info.png');
+    //background-size: 50px 50px; 
+    //background-repeat: repeat;
+    background-color: #454545;
     display: grid;
     gap: 0px;
     height: 100%;
     width: 100%;
     overflow: auto;
-    //padding: 10px;
+    padding: 15px;
 }
 
 .map-container div {
