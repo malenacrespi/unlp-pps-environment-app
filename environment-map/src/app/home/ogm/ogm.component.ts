@@ -19,8 +19,8 @@ export class OgmComponent implements OnInit {
   public ngOnInit(): void {
     this.currentOgm = this.mapDataService.getOgm();
     this.currentOgmStyle = {
-      'grid-template-rows': `repeat(${this.currentOgm.getRows().toString()},${this.currentOgm.getCellHeight().toString()}px)`,
-      'grid-template-columns': `repeat(${this.currentOgm.getColumns().toString()},${this.currentOgm.getCellWidth().toString()}px)`
+      'grid-template-rows': `repeat(${this.currentOgm.getRows().toString()},${this.currentOgm.getCellDim().toString()}px)`,
+      'grid-template-columns': `repeat(${this.currentOgm.getColumns().toString()},${this.currentOgm.getCellDim().toString()}px)`
     }
   }
 

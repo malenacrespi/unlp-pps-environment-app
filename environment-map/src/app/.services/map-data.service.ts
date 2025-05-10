@@ -9,15 +9,19 @@ export class MapDataService {
   private ogm: Map;
 
   constructor() {
+    // Variables set for debug only 
+    let roomLenght: number = 500 // [cm]
+    let roomWidth: number = 200 // [cm]
+    console.log(`-> ROOM DIMENSION: ${roomLenght}x${roomWidth}`);
+    // Creation of Map instance
     let cells: number[] = [];
-    let rows: number = 5;
-    let columns: number = 10;
-    let cellHeight: number = 100;
-    let cellWidth: number = 100;
+    let rows: number = Math.ceil(roomLenght/5);
+    let columns: number = Math.ceil(roomWidth/5); 
+    let cellDim: number = 50; // 5cm = 50px
     for(let i = 0; i < (rows * columns); i++) {
       cells[i] = Math.floor(Math.random() * 3);
     }
-    this.ogm = new Map(cells, rows, columns, cellHeight, cellWidth);
+    this.ogm = new Map(cells, rows, columns, cellDim);
   }
 
   public getOgm(): Map {
