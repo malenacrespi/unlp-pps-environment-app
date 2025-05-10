@@ -11,28 +11,28 @@ import { Map } from 'src/app/.models/map';
 })
 export class OgmComponent implements OnInit {
 
-  private currentOgm!: Map;
-  private currentOgmStyle: any;
+  private ogm!: Map;
+  private ogmStyle: any;
 
   constructor(private mapDataService: MapDataService) { }
 
   public ngOnInit(): void {
-    this.currentOgm = this.mapDataService.getOgm();
-    this.currentOgmStyle = {
-      'grid-template-rows': `repeat(${this.currentOgm.getRows().toString()},${this.currentOgm.getCellDim().toString()}px)`,
-      'grid-template-columns': `repeat(${this.currentOgm.getColumns().toString()},${this.currentOgm.getCellDim().toString()}px)`
+    this.ogm = this.mapDataService.getOgm();
+    this.ogmStyle = {
+      'grid-template-rows': `repeat(${this.ogm.getRows().toString()},${this.ogm.getCellDim().toString()}px)`,
+      'grid-template-columns': `repeat(${this.ogm.getColumns().toString()},${this.ogm.getCellDim().toString()}px)`
     }
   }
 
-  public getCurrentOgm(): number[] {
-    return this.currentOgm.getCells();
+  public getOgm(): number[] {
+    return this.ogm.getCells();
   }
 
-  public getCurrentOgmStyle(): any {
-    return this.currentOgmStyle;
+  public getOgmStyle(): any {
+    return this.ogmStyle;
   }
 
-  public getCellStyle(cell: any): any {
+  public getOgmCellStyle(cell: any): any {
     switch(cell){
       case 0: return { 'background-color': '#d9d7d7' };
       case 1: return { 'background-color': '#21d948' };
